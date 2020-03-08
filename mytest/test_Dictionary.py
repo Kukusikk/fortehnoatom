@@ -3,12 +3,6 @@ import pytest
 
 class TestForDictionary:
 
-    # @pytest.mark.parametrize(
-    #     "test_input,expected",
-    #     [[{8:'kk'},{'aa':8,'ss':7}], pytest.param([{8:'kk'},{'aa':8,'ss':7}])],
-    # )
-    # @pytest.mark.parametrize("x", [{8:'kk'},{'aa':8,'ss':7}])
-    # @pytest.mark.parametrize("y", [{8:'kk'},{'aa':8,'ss':7}])
     @pytest.mark.parametrize("x,y", [({8: 'kk'}, {8: 'kk'}), ({'aa': 8, 'ss': 7}, {'aa': 8, 'ss': 7})])
     def test_copy(self, x, y):
         # возвращает копию словаря
@@ -33,4 +27,4 @@ class TestForDictionary:
     def test_items(self, x, y):
         # возвращает пары (ключ, значение)
         assert list(x.items()) == y
-        pass
+
